@@ -2,6 +2,7 @@ import { ButtonComponent, InputData, InputFile, OptionMenu } from "../../../comp
 import { Form, Container, Row, Col } from "react-bootstrap";
 import {useFormik} from "formik";
 import * as Yup from "yup";
+import { httpPostRequest } from "../../../services/axios.services";
 
 const RegisterPage = () => {
   let defaultValues= {
@@ -32,8 +33,9 @@ const RegisterPage = () => {
   const formik = useFormik({
     initialValues : defaultValues,
     validationSchema: validationSchema,
-    onSubmit : (value) =>{
-      console.log("Value: ", value)
+    onSubmit : async (value) =>{
+      let result= await httpPostRequest('/rapidapi.com', value, false, true)
+      console.log(result);
      
     }
   })
