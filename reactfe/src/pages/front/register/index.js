@@ -34,7 +34,7 @@ const RegisterPage = () => {
     initialValues : defaultValues,
     validationSchema: validationSchema,
     onSubmit : async (value) =>{
-      let result= await httpPostRequest('/rapidapi.com', value, false, true)
+      let result=await httpPostRequest('/rapidapi.com', value, false, true)
       console.log(result);
      
     }
