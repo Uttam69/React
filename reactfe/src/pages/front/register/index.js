@@ -4,6 +4,7 @@ import {useFormik} from "formik";
 import * as Yup from "yup";
 import { httpPostRequest } from "../../../services/axios.services";
 
+
 const RegisterPage = () => {
   let defaultValues= {
     name: '',
@@ -34,7 +35,7 @@ const RegisterPage = () => {
     initialValues : defaultValues,
     validationSchema: validationSchema,
     onSubmit : async (value) =>{
-      let result=await httpPostRequest('/rapidapi.com', value, false, true)
+      let result =await httpPostRequest('/register73.p.rapidapi.com', value, false, true)
       console.log(result);
      
     }

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const axiosInstance = axios.create({
-    baseURL: "https://register73.p.rapidapi.com/register",
+    baseURL: "https://rapidapi.com",
     timeout: 30000,
     timeoutErrorMessage: "Server timed out",
     headers: {
