@@ -34,7 +34,7 @@ const HomeMenu = () =>{
     <>
     <Navbar expand="sm" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">Uttam</Navbar.Brand>
+        {/* <Navbar.Brand href="/">Uttam</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -45,7 +45,7 @@ const HomeMenu = () =>{
             <DropDownMenu data={dropdown} id="cates"/>
             
           </Nav>
-          <Nav className= "me-auto">
+          <Nav className= "me-auto, justify-content-end">
             <DropDownMenu data={profile} id="hey"/>
 
           </Nav>
